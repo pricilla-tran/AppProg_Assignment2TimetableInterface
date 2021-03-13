@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddStudentController">
+    <stylesheets> 
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+    <HBox alignment="center" spacing="10" styleClass="header"> 
+        <Text styleClass="heading" text="Add new student"/>
+    </HBox>
+    
+    <HBox alignment="center" styleClass="content">
+    <GridPane alignment="center" vgap="10" hgap="10"> 
+       <Label text="Student number:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+       <TextField fx:id="StudnumTf" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+       <Label text="Student name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+       <TextField fx:id="StudnameTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+       <Label text="Attendance:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+       <fx:define> <ToggleGroup fx:id="AttendanceTg"/> </fx:define>
+       
+       <HBox GridPane.columnIndex="1" GridPane.rowIndex="2" spacing="10"> 
+           <RadioButton text="Full Time" userData="Full Time" toggleGroup="$AttendanceTg"/>
+           <RadioButton text="Part Time" userData="Part Time" toggleGroup="$AttendanceTg"/>  
+       </HBox>
+       
+       <Label text="Scholarship:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+       <CheckBox fx:id="scholarshipCb" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+       
+       <HBox alignment="BOTTOM_CENTER" GridPane.columnSpan="2"  GridPane.columnIndex="0" GridPane.rowIndex="4">
+       <Text fx:id="errorTxt" styleClass="errorText"/>
+       </HBox>
+    </GridPane> 
+    </HBox>
+    
+     <HBox styleClass="footer" alignment="center" spacing="10"> 
+        <Button fx:id="cancelBtn" text="Cancel" onAction="#handleCancel"/>
+        <Button fx:id="addBtn" text="Add" disable="true" onAction="#handleAdd"/>
+    </HBox> 
+</VBox>
+

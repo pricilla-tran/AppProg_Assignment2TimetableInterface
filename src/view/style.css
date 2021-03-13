@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/06/2020, 10:23:46 PM
+    Author     : prici
+*/
+.root { 
+    -fx-background-color: #00749b;
+}
+
+.heading { 
+   -fx-font-size: 32px;
+   -fx-fill: #ffffff;
+   -fx-font-family: "Arial";
+}
+
+.header {
+  -fx-padding: 25px;
+  -fx-background-color: #0099cc;
+  /* -fx-background-color: #252b2b; */
+}
+
+.content {
+    -fx-background-color: #00749b;
+    -fx-padding: 15px;
+}
+
+.footer { 
+    -fx-background-color: #252b2b;
+    -fx-padding: 15px;
+}
+
+.button { 
+    -fx-font-weight: bold;
+    -fx-background-color: #0099cc;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Arial";
+}
+
+.button:hover {
+  -fx-background-color: #00bfff;
+}
+
+GridPane {
+    -fx-padding: 20px;
+    -fx-background-color: #ffffff; 
+}
+
+Label {
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  /* -fx-text-fill: #ffffff; */
+  -fx-text-fill: #333333;
+  /* -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 ); */
+}
+
+.errorText {
+  -fx-fill: FIREBRICK;
+  -fx-font-weight: bold;
+  -fx-alignment: center;
+  -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );  
+}
